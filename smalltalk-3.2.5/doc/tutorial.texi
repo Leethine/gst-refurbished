@@ -3911,6 +3911,7 @@ dot syntax is required for supporting namespaces:
 at compile-time rather than at run-time.
 
 @item @t{symbol: id | binsel | keysel[keysel]*}
+@itemx @t{eval: ``##('' [temps] exprs ``)''}
 Symbols are mostly used to represent the names of methods.
 Thus, they can hold simple identifiers, binary selectors,
 and keyword selectors:
@@ -3919,8 +3920,6 @@ and keyword selectors:
    #+
    #at:put:
 @end example
-
-@itemx @t{eval: ``##('' [temps] exprs ``)''}
 This syntax also has not been used in the tutorial, and results
 in evaluating an arbitrarily complex expression at compile-time,
 and substituting the result: for example @code{##(Object allInstances
