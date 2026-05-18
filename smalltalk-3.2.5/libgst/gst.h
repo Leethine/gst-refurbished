@@ -104,12 +104,17 @@ char *alloca ();
 
 /* A boolean type */
 #ifdef __cplusplus
-typedef bool mst_Boolean;
+  typedef bool mst_Boolean;
+#elif defined(__has_include)
+  #if __has_include(<stdbool.h>)
+    #include <stdbool.h>
+    typedef bool mst_Boolean;
+  #endif
 #else
-typedef enum {
-  _false,
-  _true
-} mst_Boolean;
+  #define true 1
+  #define false 0
+  typedef _Bool bool;
+  typedef bool mst_Boolean;
 #endif
 
 /* An indirect pointer to object data.  */
