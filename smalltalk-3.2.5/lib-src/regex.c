@@ -147,7 +147,7 @@ char *alloca ();
 /* Get the interface, including the syntax bits.  */
 #include "regex.h"
 
-/* Subroutines for pre_compile_pattern.  */
+/* Subroutines for pre_compile_pattern.
 static unsigned long scan_oct _((const char *, int, int *));
 static unsigned long scan_hex _((const char *, int, int *));
 static void store_jump _((char *, int, char *));
@@ -156,6 +156,15 @@ static void store_jump_n _((char *, int, char *, unsigned));
 static void insert_jump_n _((int, char *, char *, char *, unsigned));
 static void insert_op_2 _((int, char *, char *, int, int));
 static int memcmp_translate _((unsigned char *, unsigned char *, int));
+*/
+static unsigned long scan_oct (const char *, int, int *);
+static unsigned long scan_hex (const char *, int, int *);
+static void store_jump (char *, int, char *);
+static void insert_jump (int, char *, char *, char *);
+static void store_jump_n (char *, int, char *, unsigned);
+static void insert_jump_n (int, char *, char *, char *, unsigned);
+static void insert_op_2 (int, char *, char *, int, int);
+static int memcmp_translate (unsigned char *, unsigned char *, int);
 
 /* Define the syntax stuff, so we can do the \<, \>, etc.  */
 
@@ -168,9 +177,10 @@ static int memcmp_translate _((unsigned char *, unsigned char *, int));
 static char pre_syntax_table[1 << BYTEWIDTH];
 static void init_syntax_once _((void));
 static const unsigned char *translate = 0;
-static void init_regs _((struct pre_registers *, unsigned int));
-static void bm_init_skip
-_((int *, unsigned char *, int, const unsigned char *));
+//static void init_regs _((struct pre_registers *, unsigned int));
+//static void bm_init_skip _((int *, unsigned char *, int, const unsigned char *));
+static void init_regs (struct pre_registers *, unsigned int);
+static void bm_init_skip (int *, unsigned char *, int, const unsigned char *);
 
 #undef P
 

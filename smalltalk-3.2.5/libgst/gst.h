@@ -107,8 +107,8 @@ char *alloca ();
 typedef bool mst_Boolean;
 #else
 typedef enum {
-  false,
-  true
+  _false,
+  _true
 } mst_Boolean;
 #endif
 

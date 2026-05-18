@@ -1210,13 +1210,13 @@ int yyparse ();
 
 
 /* The lookahead symbol.  */
-int yychar;
+extern int yychar;
 
 /* The semantic value of the lookahead symbol.  */
-YYSTYPE yylval;
+extern YYSTYPE yylval;
 
 /* Number of syntax errors so far.  */
-int yynerrs;
+extern int yynerrs;
 
 
 /*----------.

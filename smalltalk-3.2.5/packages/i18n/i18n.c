@@ -112,8 +112,8 @@ typedef struct LangLookupEntryStruct
 LangLookupEntry;
 
 extern char *locale_charset ();
-static OOP buildArray ();
-static const char *loadLocale ();
+static OOP buildArray (nl_item *, int);
+static const char *loadLocale (OOP, const char*);
 
 static VMProxy *vmProxy;
 
